@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "servPart", "servPart.csproj", "{D0A89A14-05CE-4DE2-9FCF-66C0F5706C5D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Views", "Views", "{F6BF1567-C9AC-4E08-8339-DA39CC083715}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Home", "Home", "{CE3D5034-7928-48E6-A508-6A42A6986867}"
+	ProjectSection(SolutionItems) = preProject
+		HTMLPage2.html = HTMLPage2.html
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Models", "Models", "{7EB29679-3DA1-4309-B422-60C4F4C74FC9}"
+	ProjectSection(SolutionItems) = preProject
+		Sell.cs = Sell.cs
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D0A89A14-05CE-4DE2-9FCF-66C0F5706C5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0A89A14-05CE-4DE2-9FCF-66C0F5706C5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0A89A14-05CE-4DE2-9FCF-66C0F5706C5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0A89A14-05CE-4DE2-9FCF-66C0F5706C5D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CE3D5034-7928-48E6-A508-6A42A6986867} = {F6BF1567-C9AC-4E08-8339-DA39CC083715}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6F0A6D68-1423-4301-B9E2-3B3E976B42AE}
+	EndGlobalSection
+EndGlobal
