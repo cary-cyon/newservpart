@@ -16,19 +16,20 @@ namespace servPart.Controllers
     public class ProductController : ControllerBase
     {
         private ProductManager _manager;
+        //private readonly ILogger<ProductController> _logger;
+
         public ProductController(ProductManager manager)
         {
             _manager = manager;
         }
 
+        //public ProductController(ILogger<ProductController> logger)
+        //{
+        //    _logger = logger;
 
-        private readonly ILogger<ProductController> _logger;
-        public ProductController(ILogger<ProductController> logger)
-        {
-            _logger = logger;
-        }
+        //}
         [HttpGet]
-        public Product GetbyID(int id)
+        public ProductGetRes GetbyID(int id)
         {
             return _manager.getbyID(id);
         }

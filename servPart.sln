@@ -14,6 +14,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Home", "Home", "{CE3D5034-7
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Models", "Models", "{7EB29679-3DA1-4309-B422-60C4F4C74FC9}"
 	ProjectSection(SolutionItems) = preProject
+		ProductGetRes.cs = ProductGetRes.cs
 		Sell.cs = Sell.cs
 	EndProjectSection
 EndProject

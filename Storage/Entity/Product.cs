@@ -18,6 +18,9 @@ namespace servPart.Storage.Entity
         public double price { get; set; }
         public TypeProduct type { get; set; }
 
-
+        public ProductGetRes Get_Res()
+        {
+            return new ProductGetRes(name, price);
+        }
     }
 }

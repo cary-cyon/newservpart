@@ -8,6 +8,6 @@ namespace servPart.Managers.ProductManager
 {
     interface IProductManager
     {
-        public Product getbyID(int id);
+        public ProductGetRes getbyID(int id);
     }
 }

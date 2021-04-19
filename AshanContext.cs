@@ -15,5 +15,7 @@ namespace servPart
         }
         public DbSet<Product> Products { get; set; }
         public DbSet<TypeProduct> Types { get; set; }
+
+        
     }
 }

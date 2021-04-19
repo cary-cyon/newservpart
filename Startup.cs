@@ -9,6 +9,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Microsoft.OpenApi.Models;
+using servPart.Managers.ProductManager;
 using servPart.Storage;
 using System;
 using System.Collections.Generic;
@@ -31,12 +32,14 @@ namespace servPart
         {
 
             services.AddControllers();
+            services.AddScoped<ProductManager>();
             services.AddDbContext<AshanContext>(optioins => optioins.UseSqlServer(
                 "Server = DESKTOP-U42I74J;Database=AshanDatabase;Trusted_Connection=True;") );
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "servPart", Version = "v1" });
             });
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

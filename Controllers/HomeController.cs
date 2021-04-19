@@ -19,7 +19,7 @@ namespace servPart.Controllers
 
         public IActionResult Index()
         {
-            String test = "EGHDKSLA:";
+            //String test = "EGHDKSLA:";
             return View();
         }
 
