@@ -15,7 +15,6 @@ namespace servPart
         }
         public DbSet<Product> Products { get; set; }
         public DbSet<TypeProduct> Types { get; set; }
-
-        
+        public DbSet<ProductQrcode> ProductQrcodes { get; set; }
     }
 }
