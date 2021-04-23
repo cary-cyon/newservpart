@@ -33,6 +33,7 @@ namespace servPart
 
             services.AddControllers();
             services.AddScoped<ProductManager>();
+            services.AddScoped<UserManager>();
             services.AddDbContext<AshanContext>(optioins => optioins.UseSqlServer(
                 "Server = DESKTOP-U42I74J;Database=AshanDatabase;Trusted_Connection=True;") );
             services.AddSwaggerGen(c =>
