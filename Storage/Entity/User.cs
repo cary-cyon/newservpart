@@ -17,8 +17,14 @@ namespace servPart.Storage.Entity
         public string br_day { set; get; }
         public double sum_bay { set; get; }
         public int num_bay { set; get; }
-        
-        public UserType type { set; get; }
+
+        public string email { set; get; }
+
+        public List<History> History { set; get; }
+
+       
+
+    public UserType type { set; get; }
         public UserClass userClass { set; get; }
 
     }
