@@ -10,6 +10,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Microsoft.OpenApi.Models;
 using servPart.Managers.ProductManager;
+using servPart.MOK_server;
 using servPart.Storage;
 using System;
 using System.Collections.Generic;
@@ -34,6 +35,7 @@ namespace servPart
             services.AddControllers();
             services.AddScoped<ProductManager>();
             services.AddScoped<UserManager>();
+            services.AddScoped<mok_product>();
             services.AddDbContext<AshanContext>(optioins => optioins.UseSqlServer(
                 "Server = DESKTOP-U42I74J;Database=AshanDatabase;Trusted_Connection=True;") );
             services.AddSwaggerGen(c =>

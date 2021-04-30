@@ -13,5 +13,6 @@ namespace servPart.Storage.Entity
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ID { get; set; }
         public string name { get; set; }
+        public List<ProductQrcodewithType> Products { get; set; } 
     }
 }

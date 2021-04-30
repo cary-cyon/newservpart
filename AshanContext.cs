@@ -7,14 +7,16 @@ using System.Threading.Tasks;
 
 namespace servPart
 {
-    public class AshanContext: DbContext
+    public class AshanContext : DbContext
     {
-        public AshanContext(DbContextOptions<AshanContext> options):base(options)
+        public AshanContext(DbContextOptions<AshanContext> options) : base(options)
         {
 
         }
         public DbSet<Product> Products { get; set; }
         public DbSet<TypeProduct> Types { get; set; }
-        public DbSet<ProductQrcode> ProductQrcodes { get; set; }
+        public DbSet<ProductQrcodewithType> ProductQrcodes { get; set; }
+        public DbSet<Producter> Producters { get; set; }
+
     }
 }
