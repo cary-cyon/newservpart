@@ -7,15 +7,13 @@ using System.Threading.Tasks;
 
 namespace servPart.Storage.Entity
 {
-    public class TypeProduct
+    public class History
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ID { get; set; }
-        public string name { get; set; }
-        public List<ProductQrcodewithType> Products { get; set; } 
-        public List<UserType> TargetTypes { get; set; }
-        public List<UserType> AntiTargetTypes { get; set; }
-
+        public User User { get; set; }
+        public string TimeDate { get; set; }
+        public List<Product> Products { get; set; }
     }
 }

@@ -9,5 +9,6 @@ namespace servPart.Storage.Entity
     {
         public List<TypeProduct> Types { set; get; }
         public Producter Producter { set; get; }
+        public string Image { set; get; }
     }
 }

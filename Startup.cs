@@ -34,15 +34,15 @@ namespace servPart
 
             services.AddControllers();
             services.AddScoped<ProductManager>();
-            services.AddScoped<UserManager>();
             services.AddScoped<mok_product>();
+
             services.AddDbContext<AshanContext>(optioins => optioins.UseSqlServer(
                 "Server = DESKTOP-U42I74J;Database=AshanDatabase;Trusted_Connection=True;") );
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "servPart", Version = "v1" });
             });
-
+            services.AddTransient<UserManager>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
