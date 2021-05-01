@@ -10,6 +10,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Microsoft.OpenApi.Models;
 using servPart.Managers.ProductManager;
+using servPart.Managers.UserManager;
 using servPart.MOK_server;
 using servPart.Storage;
 using System;
@@ -43,6 +44,7 @@ namespace servPart
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "servPart", Version = "v1" });
             });
             services.AddTransient<UserManager>();
+            services.AddTransient<HistoryManager>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

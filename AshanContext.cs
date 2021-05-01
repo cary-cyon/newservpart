@@ -12,10 +12,28 @@ namespace servPart
         public AshanContext(DbContextOptions<AshanContext> options) : base(options)
         {
 
-            Users = new List<User>() { new User() {name = "Pcelov",
-                                                   sum_buy = -1,
-                                                   br_day = "00000000",
-                                                   num_buy = 0} };
+            Users = new List<User>() { 
+            new User() {ID = 0,
+                        name = "Pcelov",
+                        sum_buy = -1,
+                        br_day = "00000000",
+                        num_buy = 0},
+            new User() {ID = 1,
+                        name = "Komarkov",
+                        sum_buy = 2000,
+                        br_day = "12072000",
+                        num_buy = 5}};
+            Histories = new List<History>() { new History() {
+            User = Users[0],
+            Products = new List<Product>(),
+            TimeDate = "12122020",
+            },
+            new History() {
+            User = Users[1],
+            Products = new List<Product>(),
+            TimeDate = "18122020",
+            }
+            };
         }
         public DbSet<Product> Products { get; set; } // delete
         public List<TypeProduct> Types { get; set; }

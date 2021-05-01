@@ -14,21 +14,21 @@ namespace servPart.Controllers
     public class UserController : Controller
     {
         private UserManager _man;
-        //[HttpGet]
-        //public User GetUser(int id)
-        //{
-        //    return _man.InfoUser(id);
-        //}
+        [HttpGet]
+        public User GetUser(int id)
+        {
+            return _man.InfoUser(id);
+        }
         [HttpPost]
         public void AddUser(User user)
         {
             _man.AddNewUser(user);
         }
-        [HttpGet]
-        public List<User> GetAll()
-        {
-            return _man.GetUsers();
-        }
+        //[HttpGet]
+        //public List<User> GetAll()
+        //{
+        //    return _man.GetUsers();
+        //}
         public UserController(UserManager man)
         {
             _man = man;
