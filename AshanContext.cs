@@ -61,7 +61,7 @@ namespace servPart
                 }
             };
 
-
+            StocksOfType = new List<StockOfType> ();
 
 
         }
