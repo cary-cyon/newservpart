@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using servPart.Managers.ProductManager;
 using servPart.Models;
+using servPart.Storage.Entity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,7 +19,7 @@ namespace servPart.Controllers
             _manager = manager;
         }
         [HttpGet]
-        public ProductQrGetRes GetbyQr(string Qr)
+        public ProductQrcodewithType GetbyQr(string Qr)
         {
             return _manager.GetByQrcode(Qr);
         }

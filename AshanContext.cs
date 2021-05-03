@@ -35,22 +35,34 @@ namespace servPart
             }
             };
 
-            ProductQrcodewithType X = new ProductQrcodewithType()
-            {
+            ProductQrcodes = new List<ProductQrcodewithType>() {
+
+            new ProductQrcodewithType()
+                {
+                id =0,
                 Price = 200,
                 Name = "Cheburek"
+                },
+            new ProductQrcodewithType()
+                {
+                id =1,
+                Price = 200,
+                Name = "Chebupel"
+                }
             };
-
-            List<Stock> Stocks = new List<Stock>()
+             Stocks = new List<Stock>()
             {
                 new Stock()
                 {
                     ID = 0,
                     Value = 5,
-                    product = X
-                    
+                    product =   ProductQrcodes[0]
+
                 }
             };
+
+
+
 
         }
         public DbSet<Product> Products { get; set; } // delete

@@ -17,14 +17,35 @@ namespace servPart.Managers.ProductManager
         {
             _con = con;
         }
-        public ProductGetRes getbyID(int id)
+
+        public ProductQrcodewithType getbyID(int id)
         {
-            return _con.Products.FirstOrDefault(st => st.ID == id).Get_Res();
+            ProductQrcodewithType X = new ProductQrcodewithType();
+
+            X = _con.ProductQrcodes.FirstOrDefault(st => st.id == id);
+
+            for (int i = 0; i < _con.Stocks.Count(); i++)
+            {
+                if (_con.Stocks[i].product == X) { X.Stock(_con.Stocks[i].Value); }
+            }
+
+            return X;
         }
 
-        public ProductQrGetRes GetByQrcode(string Qr)
+        public ProductQrcodewithType GetByQrcode(string Qr)
         {
-            return _con.ProductQrcodes.FirstOrDefault(st => st.Qrcode == Qr).GetRes();
+            ProductQrcodewithType X = new ProductQrcodewithType();
+
+            X = _con.ProductQrcodes.FirstOrDefault(st => st.Qrcode == Qr);
+
+            for (int i =0; i< _con.Stocks.Count(); i++)
+            {
+                if (_con.Stocks[i].product == X ) { X.Stock(_con.Stocks[i].Value); }
+            }
+
+            return X;
         }
+
+
     }
 }

@@ -19,7 +19,7 @@ namespace servPart.Controllers
             }
 
             [HttpGet]
-           StockOfType Get(int id)
+           public StockOfType Get(int id)
             {
                 return _man.getbyID(id);
             }

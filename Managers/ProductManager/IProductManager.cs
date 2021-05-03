@@ -8,6 +8,6 @@ namespace servPart.Managers.ProductManager
 {
     interface IProductManager
     {
-        public ProductGetRes getbyID(int id);
+        public ProductQrcodewithType getbyID(int id);
     }
 }

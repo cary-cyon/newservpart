@@ -14,7 +14,7 @@ namespace servPart.Storage.Entity
         public ProductQrcodewithType Stock (double value)
         {
             ProductQrcodewithType X = this;
-            X.Price = (1 - value) * X.Price;
+            X.Price = (1 - value/100) * X.Price;
             return X;
         }
     }
