@@ -17,5 +17,15 @@ namespace servPart.Storage.Entity
         public List<UserType> TargetTypes { get; set; }
         public List<UserType> AntiTargetTypes { get; set; }
 
+        public TypeProduct Stock(double value)
+        {
+            TypeProduct X = this;
+            for (int i = 0; i < X.Products.Count(); i++)
+            {
+                X.Products[i].Price = (1 - value) * X.Products[i].Price;
+            }
+            return X;
+        }
+
     }
 }

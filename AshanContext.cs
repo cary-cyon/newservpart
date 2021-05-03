@@ -12,7 +12,7 @@ namespace servPart
         public AshanContext(DbContextOptions<AshanContext> options) : base(options)
         {
 
-            Users = new List<User>() { 
+            Users = new List<User>() {
             new User() {ID = 0,
                         name = "Pcelov",
                         sum_buy = -1,
@@ -34,6 +34,24 @@ namespace servPart
             TimeDate = "18122020",
             }
             };
+
+            ProductQrcodewithType X = new ProductQrcodewithType()
+            {
+                Price = 200,
+                Name = "Cheburek"
+            };
+
+            List<Stock> Stocks = new List<Stock>()
+            {
+                new Stock()
+                {
+                    ID = 0,
+                    Value = 5,
+                    product = X
+                    
+                }
+            };
+
         }
         public DbSet<Product> Products { get; set; } // delete
         public List<TypeProduct> Types { get; set; }
@@ -43,7 +61,8 @@ namespace servPart
         public List<User> Users { get; set; }
         public List<UserClass> UserClasses { get; set; }
         public List<UserType> UserTypes { get; set; }
-
-
+        public List<Stock> Stocks { get; set; }
+        public List<StockOfType> StocksOfType { get; set; }
+   
     }
 }
