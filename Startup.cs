@@ -10,6 +10,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Microsoft.OpenApi.Models;
 using servPart.Managers.ProductManager;
+using servPart.Managers.StockManager;
 using servPart.Managers.UserManager;
 using servPart.MOK_server;
 using servPart.Storage;
@@ -36,6 +37,9 @@ namespace servPart
             services.AddControllers();
             services.AddScoped<ProductManager>();
             services.AddScoped<mok_product>();
+            services.AddScoped<Stock1_1Manager>();
+            services.AddScoped<StockOfTypeManager>();
+            services.AddScoped<StockManager>();
 
             services.AddDbContext<AshanContext>(optioins => optioins.UseSqlServer(
                 "Server = DESKTOP-U42I74J;Database=AshanDatabase;Trusted_Connection=True;") );

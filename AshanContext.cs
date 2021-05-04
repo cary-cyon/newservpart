@@ -41,13 +41,36 @@ namespace servPart
                 {
                 id =0,
                 Price = 200,
-                Name = "Cheburek"
+                Name = "Cheburek",
+                Qrcode = "0"
                 },
             new ProductQrcodewithType()
                 {
                 id =1,
                 Price = 200,
-                Name = "Chebupel"
+                Name = "Chebupel",
+                Qrcode = "1"
+                },
+            new ProductQrcodewithType()
+                {
+                id =2,
+                Price = 200,
+                Name = "Cheburek2",
+                Qrcode = "2"
+                },
+            new ProductQrcodewithType()
+                {
+                id =3,
+                Price = 200,
+                Name = "Chebupel2",
+                Qrcode = "3"
+                },
+             new ProductQrcodewithType()
+                {
+                id =3,
+                Price = 200,
+                Name = "Chebupel3",
+                Qrcode = "4"
                 }
             };
              Stocks = new List<Stock>()
@@ -63,8 +86,18 @@ namespace servPart
 
             StocksOfType = new List<StockOfType> ();
 
+            Stocks1_1 = new List<Stock1_1>()
+            {
+                new Stock1_1()
+                {
+                    ID = 0,
+                    Value = 10,
+                    products = new List<ProductQrcodewithType>()  { ProductQrcodes[2],ProductQrcodes[3], ProductQrcodes[4] }
 
-        }
+                }
+            };
+
+    }
         public DbSet<Product> Products { get; set; } // delete
         public List<TypeProduct> Types { get; set; }
         public List<ProductQrcodewithType> ProductQrcodes { get; set; }

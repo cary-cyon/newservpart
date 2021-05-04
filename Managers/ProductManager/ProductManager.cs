@@ -70,18 +70,19 @@ namespace servPart.Managers.ProductManager
             ProductQrcodewithType X = new ProductQrcodewithType();
             X = _con.ProductQrcodes.FirstOrDefault(st => st.Qrcode == Qr);
             List<ProductQrcodewithType> Y = new List<ProductQrcodewithType>();
-            
+            int l = -1;
             for (int i = 0; i < _con.Stocks1_1.Count(); i++)
             {
                 for (int j = 0; j < _con.Stocks1_1[i].products.Count(); j++) {
 
                     if (_con.Stocks1_1[i].products[j] == X) {
 
-                        for (int k = 0; k < _con.Stocks1_1.Count(); k++)
+                        for (int k = 0; k < _con.Stocks1_1[i].products.Count(); k++)
                             if (_con.Stocks1_1[i].products[k] != X)
                             {
                                 Y.Add(_con.Stocks1_1[i].products[k]);
-                                Y[k].Stock(_con.Stocks1_1[i].Value);
+                                l++;
+                                Y[l].Stock(_con.Stocks1_1[i].Value);
                             }
                     }
                 }
