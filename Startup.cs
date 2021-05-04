@@ -10,6 +10,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Microsoft.OpenApi.Models;
 using servPart.Managers.ProductManager;
+using servPart.Managers.StockManager;
 using servPart.Managers.UserManager;
 using servPart.MOK_server;
 using servPart.Storage;
@@ -45,6 +46,7 @@ namespace servPart
             });
             services.AddTransient<UserManager>();
             services.AddTransient<HistoryManager>();
+            services.AddScoped<StockManager>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

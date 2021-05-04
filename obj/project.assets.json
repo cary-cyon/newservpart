@@ -5980,19 +5980,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Ivan\\.nuget\\packages\\": {}
+    "C:\\Users\\Vlad\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Git\\newservpart\\servPart.csproj",
+      "projectUniqueName": "C:\\Users\\Vlad\\source\\repos\\serv_2\\servPart.csproj",
       "projectName": "servPart",
-      "projectPath": "C:\\Git\\newservpart\\servPart.csproj",
-      "packagesPath": "C:\\Users\\Ivan\\.nuget\\packages\\",
-      "outputPath": "C:\\Git\\newservpart\\obj\\",
+      "projectPath": "C:\\Users\\Vlad\\source\\repos\\serv_2\\servPart.csproj",
+      "packagesPath": "C:\\Users\\Vlad\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Vlad\\source\\repos\\serv_2\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Ivan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Vlad\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6059,7 +6059,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }
