@@ -77,5 +77,6 @@ namespace servPart
         public List<StockOfType> StocksOfType { get; set; }
         public List<Stock1_1> Stocks1_1 { get; set; }
 
+        public List<Image> Images { get; set; }
     }
 }
