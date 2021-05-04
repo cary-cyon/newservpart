@@ -34,6 +34,7 @@ namespace servPart
             TimeDate = "18122020",
             }
             };
+            Images = new List<Image>();
         }
         public DbSet<Product> Products { get; set; } // delete
         public List<TypeProduct> Types { get; set; }
@@ -43,7 +44,6 @@ namespace servPart
         public List<User> Users { get; set; }
         public List<UserClass> UserClasses { get; set; }
         public List<UserType> UserTypes { get; set; }
-
-
+        public List<Image> Images { get; set; }
     }
 }
