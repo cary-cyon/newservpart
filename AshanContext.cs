@@ -75,6 +75,7 @@ namespace servPart
         public List<UserType> UserTypes { get; set; }
         public List<Stock> Stocks { get; set; }
         public List<StockOfType> StocksOfType { get; set; }
-   
+        public List<Stock1_1> Stocks1_1 { get; set; }
+
     }
 }
