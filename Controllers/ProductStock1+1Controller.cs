@@ -11,17 +11,17 @@ namespace servPart.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ProductQrcodeController : Controller
+    public class ProductStock1_1Controller : Controller
     {
         private ProductManager _manager;
-        public ProductQrcodeController(ProductManager manager)
+        public ProductStock1_1Controller(ProductManager manager)
         {
             _manager = manager;
         }
         [HttpGet]
-        public ProductQrcodewithType GetbyQr(string Qr)
+        public List<ProductQrcodewithType> ShowStocks1_1(string Qr)
         {
-            return _manager.GetByQrcode(Qr);
+            return _manager.ShowStocksProdukts(Qr);
         }
     }
 }

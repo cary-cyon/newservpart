@@ -29,7 +29,7 @@ namespace servPart.Controllers
 
         //}
         [HttpGet]
-        public ProductGetRes GetbyID(int id)
+        public ProductQrcodewithType GetbyID(int id)
         {
             return _manager.getbyID(id);
         }
