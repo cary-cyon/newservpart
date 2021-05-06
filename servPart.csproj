@@ -2,7 +2,15 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
+    <UserSecretsId>3ccafc7c-c682-436d-bab8-3c608dff9581</UserSecretsId>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Managers\ProducterManager\**" />
+    <Content Remove="Managers\ProducterManager\**" />
+    <EmbeddedResource Remove="Managers\ProducterManager\**" />
+    <None Remove="Managers\ProducterManager\**" />
+  </ItemGroup>
 
   <ItemGroup>
     <Compile Remove="Storage\Entity\History 2.cs" />

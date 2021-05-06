@@ -23,10 +23,11 @@ namespace servPart.Controllers
         {
             return _manager.GetByQrcode(Qr, user_id);
         }
-        [HttpDelete]
-        public List<ProductQrcodewithType> Delete(int id, int count)
-        {
-            return _manager.DeletProductFromBase(id, count);
-        }
+        /*
+       [HttpDelete]
+      public List<ProductQrcodewithType> Delete(int id, int count)
+       {
+           return _manager.DeletProductFromBase(id, count);
+       }*/
     }
 }

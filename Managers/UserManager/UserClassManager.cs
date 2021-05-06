@@ -34,7 +34,7 @@ namespace servPart.Managers.UserManager
         }
         public List<UserClass> GetUserClasses()
         {
-            return _con.UserClasses;
+            return _con.UserClasses.ToList();
         }
 
 

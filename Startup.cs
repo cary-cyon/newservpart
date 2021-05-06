@@ -44,7 +44,7 @@ namespace servPart
            
 
             services.AddDbContext<AshanContext>(optioins => optioins.UseSqlServer(
-                "Server = DESKTOP-U42I74J;Database=AshanDatabase;Trusted_Connection=True;") );
+                "Server = carysqlserver.database.windows.net;Database=sqlqrdatabase;Password=123456Zxc;User=cary_cyon") );
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "servPart", Version = "v1" });

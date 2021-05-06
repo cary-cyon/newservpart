@@ -9,8 +9,10 @@ namespace servPart.Storage.Entity
     {
         public List<string> Types { set; get; }
         public Producter Producter { set; get; }
-        public string Image { set; get; }
-        public int count { set; get; }
+
+        public Image Image { set; get; }
+
+       // public int count { set; get; }
 
         public ProductQrcodewithType Stock (double value)
         {

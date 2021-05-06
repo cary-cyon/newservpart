@@ -20,6 +20,7 @@ namespace servPart.Managers.ProductManager
 
         public ProductQrcodewithType getbyID(int id, int user_id)
         {
+
             ProductQrcodewithType X = new ProductQrcodewithType();
            
             X = _con.ProductQrcodes.FirstOrDefault(st => st.id == id);
@@ -48,10 +49,12 @@ namespace servPart.Managers.ProductManager
                 }
             */
             return X;
+
         }
 
         public ProductQrcodewithType GetByQrcode(string Qr, int user_id)
         {
+
             ProductQrcodewithType X = new ProductQrcodewithType();
            
 
@@ -85,10 +88,12 @@ namespace servPart.Managers.ProductManager
            */
 
             return X;
+
         }
 
         public List<ProductQrcodewithType> ShowStocksProdukts(string Qr)
         {
+
             ProductQrcodewithType X = new ProductQrcodewithType();
             X = _con.ProductQrcodes.FirstOrDefault(st => st.Qrcode == Qr);
             List<ProductQrcodewithType> Y = new List<ProductQrcodewithType>();
@@ -131,7 +136,7 @@ namespace servPart.Managers.ProductManager
             */
             return Y;
         }
-
+/*
         public List<ProductQrcodewithType> DeletProductFromBase(int id, int k)
         {
             
@@ -146,8 +151,8 @@ namespace servPart.Managers.ProductManager
                 }
                 
             }
-            return _con.ProductQrcodes;
+            return _con.ProductQrcodes.ToList();
         }
-
+*/
     }
 }

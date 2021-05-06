@@ -15,7 +15,7 @@ namespace servPart.Managers.ProductManager
         }
         public TypeProduct getbyID(int id)
         {
-            return _con.types.FirstOrDefault(S => S.ID == id);
+            return _con.Types.FirstOrDefault(S => S.ID == id);
         }
     }
 }
