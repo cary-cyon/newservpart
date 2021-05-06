@@ -19,9 +19,14 @@ namespace servPart.Controllers
             _manager = manager;
         }
         [HttpGet]
-        public ProductQrcodewithType GetbyQr(string Qr)
+        public ProductQrcodewithType GetbyQr(string Qr, int user_id)
         {
-            return _manager.GetByQrcode(Qr);
+            return _manager.GetByQrcode(Qr, user_id);
+        }
+        [HttpDelete]
+        public List<ProductQrcodewithType> Delete(int id, int count)
+        {
+            return _manager.DeletProductFromBase(id, count);
         }
     }
 }

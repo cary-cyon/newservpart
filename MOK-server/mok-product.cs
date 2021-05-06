@@ -19,7 +19,7 @@ namespace servPart.MOK_server
             adition.id = 1;
             adition.Qrcode = "4600819351681";
             adition.Producter = new Producter();
-            adition.Types = new List<TypeProduct>();
+            adition.Types = new List<string>();
 
             Products = new List<ProductQrcodewithType>() { adition };
         }

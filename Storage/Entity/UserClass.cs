@@ -11,6 +11,7 @@ namespace servPart.Storage.Entity
         public int ID { set; get; }
         public string name { set; get; }
         public double start_sum { set; get; }
+        public double end_sum { set; get; }
 
         public List<User> Users { get; set; }
     }

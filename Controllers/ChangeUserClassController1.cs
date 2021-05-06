@@ -11,33 +11,20 @@ namespace servPart.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class UserController : Controller
+    public class ChangeUserClassController1 : Controller
     {
         private UserManager _man;
-
-
-        public UserController(UserManager man)
+        public ChangeUserClassController1(UserManager man)
         {
             _man = man;
         }
 
 
-        [HttpGet]
-        public User GetUser(int id)
-        {
-            return _man.InfoUser(id);
-        }
         [HttpPost]
-        public void AddUser(User user)
+        public User ChangeClass(int id_user, int id_class)
         {
-            _man.AddNewUser(user);
+           return _man.ChangeClass(id_user, id_class);
         }
-        //[HttpGet]
-        //public List<User> GetAll()
-        //{
-        //    return _man.GetUsers();
-        //}
-      
-        
+
     }
 }

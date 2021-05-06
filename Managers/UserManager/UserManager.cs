@@ -9,6 +9,11 @@ namespace servPart.Managers.ProductManager
     public class UserManager: IUserManager
     {
         private AshanContext _con;
+        public UserManager(AshanContext con)
+        {
+            _con = con;
+        }
+
         public User InfoUser(int id)
         {
             return _con.Users.FirstOrDefault(Us => Us.ID == id);
@@ -21,9 +26,18 @@ namespace servPart.Managers.ProductManager
         {
             return _con.Users;
         }
-        public UserManager(AshanContext con)
+        public User ChangeClass(int user_id, int class_id)
         {
-            _con = con;
+            User T = new User();
+            T = _con.Users.FirstOrDefault(us => us.ID == user_id);
+            UserClass X = new UserClass();
+            X = _con.UserClasses.FirstOrDefault(cl => cl.ID == class_id);
+
+            if (X != null && T != null)
+            { 
+                _con.Users.FirstOrDefault(us => us.ID == user_id).userClass = _con.UserClasses.FirstOrDefault(cl => cl.ID == class_id);
+            }
+            return _con.Users.FirstOrDefault(us => us.ID == user_id);
         }
     }
 }
