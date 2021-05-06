@@ -20,74 +20,77 @@ namespace servPart.Managers.ProductManager
 
         public ProductQrcodewithType getbyID(int id)
         {
-            ProductQrcodewithType X = new ProductQrcodewithType();
-           
-            X = _con.ProductQrcodes.FirstOrDefault(st => st.id == id);
-        
-            for (int i = 0; i < _con.Stocks.Count(); i++)
-            {
-                if (_con.Stocks[i].product == X) { X.Stock(_con.Stocks[i].Value); }
-            }
+            //ProductQrcodewithType X = new ProductQrcodewithType();
+
+            //X = _con.ProductQrcodes.FirstOrDefault(st => st.id == id);
+
+            //for (int i = 0; i < _con.Stocks.Count(); i++)
+            //{
+            //    if (_con.Stocks[i].product == X) { X.Stock(_con.Stocks[i].Value); }
+            //}
 
 
-            for (int i = 0; i < _con.StocksOfType.Count(); i++)
-            {
-                for (int j = 0; j < X.Types.Count(); j++)
-                {
-                    if (_con.StocksOfType[i].Type == X.Types[j] ) { X.Stock(_con.Stocks[i].Value); }
-                }
-            }
+            //for (int i = 0; i < _con.StocksOfType.Count(); i++)
+            //{
+            //    for (int j = 0; j < X.Types.Count(); j++)
+            //    {
+            //        if (_con.StocksOfType[i].Type == X.Types[j] ) { X.Stock(_con.Stocks[i].Value); }
+            //    }
+            //}
 
-            return X;
+            //return X;
+            return _con.ProductQrcodes.FirstOrDefault(s => s.id == id);
         }
 
         public ProductQrcodewithType GetByQrcode(string Qr)
         {
-            ProductQrcodewithType X = new ProductQrcodewithType();
-           
+            //ProductQrcodewithType X = new ProductQrcodewithType();
 
-            X = _con.ProductQrcodes.FirstOrDefault(st => st.Qrcode == Qr);
-          
-            for (int i =0; i< _con.Stocks.Count(); i++)
-            {
-                if (_con.Stocks[i].product == X ) { X.Stock(_con.Stocks[i].Value); }
-            }
 
-            for (int i = 0; i < _con.StocksOfType.Count(); i++)
-            {
-                for (int j = 0; j < X.Types.Count(); j++)
-                {
-                    if (_con.StocksOfType[i].Type == X.Types[j]  ) { X.Stock(_con.Stocks[i].Value); }
-                }
-            }
-           
+            //X = _con.ProductQrcodes.FirstOrDefault(st => st.Qrcode == Qr);
 
-            return X;
+            //for (int i =0; i< _con.Stocks.Count(); i++)
+            //{
+            //    if (_con.Stocks[i].product == X ) { X.Stock(_con.Stocks[i].Value); }
+            //}
+
+            //for (int i = 0; i < _con.StocksOfType.Count(); i++)
+            //{
+            //    for (int j = 0; j < X.Types.Count(); j++)
+            //    {
+            //        if (_con.StocksOfType[i].Type == X.Types[j]  ) { X.Stock(_con.Stocks[i].Value); }
+            //    }
+            //}
+
+
+            //return X;
+            return _con.ProductQrcodes.FirstOrDefault(s => s.Qrcode == Qr);
         }
 
         public List<ProductQrcodewithType> ShowStocksProdukts(string Qr)
         {
-            ProductQrcodewithType X = new ProductQrcodewithType();
-            X = _con.ProductQrcodes.FirstOrDefault(st => st.Qrcode == Qr);
-            List<ProductQrcodewithType> Y = new List<ProductQrcodewithType>();
-            
-            for (int i = 0; i < _con.Stocks1_1.Count(); i++)
-            {
-                for (int j = 0; j < _con.Stocks1_1[i].products.Count(); j++) {
+            //ProductQrcodewithType X = new ProductQrcodewithType();
+            //X = _con.ProductQrcodes.FirstOrDefault(st => st.Qrcode == Qr);
+            //List<ProductQrcodewithType> Y = new List<ProductQrcodewithType>();
 
-                    if (_con.Stocks1_1[i].products[j] == X) {
+            //for (int i = 0; i < _con.Stocks1_1.Count(); i++)
+            //{
+            //    for (int j = 0; j < _con.Stocks1_1[i].products.Count(); j++) {
 
-                        for (int k = 0; k < _con.Stocks1_1.Count(); k++)
-                            if (_con.Stocks1_1[i].products[k] != X)
-                            {
-                                Y.Add(_con.Stocks1_1[i].products[k]);
-                                Y[k].Stock(_con.Stocks1_1[i].Value);
-                            }
-                    }
-                }
-            }
+            //        if (_con.Stocks1_1[i].products[j] == X) {
 
-            return Y;
+            //            for (int k = 0; k < _con.Stocks1_1.Count(); k++)
+            //                if (_con.Stocks1_1[i].products[k] != X)
+            //                {
+            //                    Y.Add(_con.Stocks1_1[i].products[k]);
+            //                    Y[k].Stock(_con.Stocks1_1[i].Value);
+            //                }
+            //        }
+            //    }
+            //}
+
+            //return Y;
+            return _con.ProductQrcodes.ToList();
         }
 
 

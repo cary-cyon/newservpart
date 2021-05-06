@@ -16,10 +16,11 @@ namespace servPart.Managers.ProductManager
         public void AddNewUser(User user)
         {
             _con.Users.Add(user);
+            _con.SaveChanges();
         }
         public List<User> GetUsers()
         {
-            return _con.Users;
+            return _con.Users.ToList();
         }
         public UserManager(AshanContext con)
         {
