@@ -9,7 +9,7 @@ namespace servPart.Managers.ProductManager
 {
     interface IProductQrcodeManager
     {
-        public ProductQrcodewithType GetByQrcode(string Qr);
+        public ProductQrcodewithType GetByQrcode(string Qr, int id);
     } 
 
 }

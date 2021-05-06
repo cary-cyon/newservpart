@@ -29,9 +29,9 @@ namespace servPart.Controllers
 
         //}
         [HttpGet]
-        public ProductQrcodewithType GetbyID(int id)
+        public ProductQrcodewithType GetbyID(int id, int User_ID)
         {
-            return _manager.getbyID(id);
+            return _manager.getbyID(id, User_ID);
         }
     }
 }

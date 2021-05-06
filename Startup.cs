@@ -37,6 +37,11 @@ namespace servPart
             services.AddControllers();
             services.AddScoped<ProductManager>();
             services.AddScoped<mok_product>();
+            services.AddScoped<StockManager>();
+            services.AddScoped<Stock1_1Manager>();
+            services.AddScoped<StockOfTypeManager>();
+            services.AddScoped<TypeManager>();
+           
 
             services.AddDbContext<AshanContext>(optioins => optioins.UseSqlServer(
                 "Server = carysqlserver.database.windows.net;Database=sqlqrdatabase;Password=123456Zxc;User=cary_cyon") );
@@ -45,8 +50,9 @@ namespace servPart
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "servPart", Version = "v1" });
             });
             services.AddTransient<UserManager>();
+            services.AddScoped<UserClassManager>();
             services.AddTransient<HistoryManager>();
-            services.AddScoped<StockManager>();
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -20,6 +20,8 @@ namespace servPart.Storage.Entity
         
         public UserType type { set; get; }
         public UserClass userClass { set; get; }
+
+        /*
         public static bool operator ==(User other, User it )
         {
             if (it.ID == other.ID)
@@ -41,6 +43,6 @@ namespace servPart.Storage.Entity
             {
                 return true;
             }
-        }
+        }*/
     }
 }
