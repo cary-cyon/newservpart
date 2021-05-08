@@ -20,7 +20,7 @@ namespace servPart.Managers.StockManager
         }
         public Stock getbyID(int id)
         {
-            return _con.Stocks.Where(S => S.ID == id).First();
+            return _con.Stocks.FirstOrDefault(s => s.ID == id);
         }
     }
 }
