@@ -34,7 +34,10 @@ namespace servPart.Managers.ProductManager
             User U = new User();
             U = _con.Users.FirstOrDefault(st => st.ID == user_id);
 
-            if (_con.StocksByClass.FirstOrDefault(s => s._class == U.userClass).products.FirstOrDefault(p => p == X) != null ) { X.Stock(_con.StocksByClass.FirstOrDefault(s => s._class == U.userClass).Value); }
+            if (_con.StocksByClass.FirstOrDefault(s => s._class == U.userClass).products.FirstOrDefault(p => p == X) != null )
+                { 
+                    X.Stock(_con.StocksByClass.FirstOrDefault(s => s._class == U.userClass).Value); 
+                }
 
             /*
                 
@@ -59,22 +62,35 @@ namespace servPart.Managers.ProductManager
            
 
             X = _con.ProductQrcodes.Include(p => p.Types).FirstOrDefault(st => st.Qrcode == Qr);
-
-            if (_con.Stocks.FirstOrDefault(s => s.product == X) != null) { X.Stock(_con.Stocks.FirstOrDefault(s => s.product == X).Value); }
-
-            for (int i = 0; i < X.Types.Count(); i++)
+            if (X != null)
             {
-                if (_con.StocksOfType.FirstOrDefault(s => s.Type == X.Types[i]) != null) { X.Stock(_con.StocksOfType.FirstOrDefault(s => s.Type == X.Types[i]).Value); }
-            }
+                if (_con.Stocks.FirstOrDefault(s => s.product == X) != null)
+                {
+                    X.Stock(_con.Stocks.FirstOrDefault(s => s.product == X).Value);
+                }
 
+                for (int i = 0; i < X.Types.Count(); i++)
+                {
+                    var test = _con.StocksOfType.FirstOrDefault(s => s.Type == X.Types[i]);
+                    if (test != null)
+                    {
+                        X.Stock(test.Value);
+                    }
+                }
+            }
             User U = new User();
             U = _con.Users.Include(p => p.userClass).FirstOrDefault(st => st.ID == user_id);
-
-            if (_con.StocksByClass.FirstOrDefault(s => s._class == U.userClass).products.FirstOrDefault(p => p == X) != null)
+            if (U != null)
             {
-                X.Stock(_con.StocksByClass.FirstOrDefault(s => s._class == U.userClass).Value);
+                var res = _con.StocksByClass.Include(p => p.products).FirstOrDefault(s => s._class == U.userClass);
+                if (res != null)
+                {
+                    if (res.products.FirstOrDefault(p => p == X) != null)
+                    {
+                        X.Stock(_con.StocksByClass.FirstOrDefault(s => s._class == U.userClass).Value);
+                    }
+                }
             }
-
             /*
             for (int i =0; i< _con.Stocks.Count(); i++)
             {

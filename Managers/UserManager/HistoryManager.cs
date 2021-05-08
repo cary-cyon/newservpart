@@ -1,4 +1,5 @@
-﻿using servPart.Storage.Entity;
+﻿using Microsoft.EntityFrameworkCore;
+using servPart.Storage.Entity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,7 +16,7 @@ namespace servPart.Managers.UserManager
         }
         public List<History> GetHistory(int id)
         {
-            return _con.Histories.Where(st => st.User.ID == id).ToList();
+            return _con.Histories.Include(h => h.Products).Where(st => st.User.ID == id).ToList();
         }
         public void AddHistory(History his)
         {
