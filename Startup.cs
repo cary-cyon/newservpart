@@ -33,8 +33,10 @@ namespace servPart
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
-            services.AddControllers();
+            
+            services.AddControllers().AddNewtonsoftJson().AddNewtonsoftJson(options =>
+            options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
+            );
             services.AddScoped<ProductManager>();
             services.AddScoped<mok_product>();
             services.AddScoped<StockManager>();
@@ -43,8 +45,7 @@ namespace servPart
             services.AddScoped<TypeManager>();
            
 
-            services.AddDbContext<AshanContext>(optioins => optioins.UseSqlServer(
-                "Server = carysqlserver.database.windows.net;Database=sqlqrdatabase;Password=123456Zxc;User=cary_cyon") );
+            services.AddDbContext<AshanContext>(optioins => optioins.UseSqlServer(Secret.log) );
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "servPart", Version = "v1" });

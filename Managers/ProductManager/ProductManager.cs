@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using servPart.Models;
+//using servPart.Models;
 using servPart.Storage;
 using servPart.Storage.Entity;
 using System;
@@ -28,7 +28,7 @@ namespace servPart.Managers.ProductManager
             if (_con.Stocks.FirstOrDefault(s => s.product == X) != null) { X.Stock(_con.Stocks.FirstOrDefault(s => s.product == X).Value); }
 
             for (int i = 0; i < X.Types.Count(); i++) {
-                if (_con.StocksOfType.FirstOrDefault(s => s.Type.name == X.Types[i]) != null) { X.Stock(_con.StocksOfType.FirstOrDefault(s => s.Type.name == X.Types[i]).Value); }
+                if (_con.StocksOfType.FirstOrDefault(s => s.Type == X.Types[i]) != null) { X.Stock(_con.StocksOfType.FirstOrDefault(s => s.Type == X.Types[i]).Value); }
             }
 
             User U = new User();
@@ -58,19 +58,22 @@ namespace servPart.Managers.ProductManager
             ProductQrcodewithType X = new ProductQrcodewithType();
            
 
-            X = _con.ProductQrcodes.FirstOrDefault(st => st.Qrcode == Qr);
+            X = _con.ProductQrcodes.Include(p => p.Types).FirstOrDefault(st => st.Qrcode == Qr);
 
             if (_con.Stocks.FirstOrDefault(s => s.product == X) != null) { X.Stock(_con.Stocks.FirstOrDefault(s => s.product == X).Value); }
 
             for (int i = 0; i < X.Types.Count(); i++)
             {
-                if (_con.StocksOfType.FirstOrDefault(s => s.Type.name == X.Types[i]) != null) { X.Stock(_con.StocksOfType.FirstOrDefault(s => s.Type.name == X.Types[i]).Value); }
+                if (_con.StocksOfType.FirstOrDefault(s => s.Type == X.Types[i]) != null) { X.Stock(_con.StocksOfType.FirstOrDefault(s => s.Type == X.Types[i]).Value); }
             }
 
             User U = new User();
-            U = _con.Users.FirstOrDefault(st => st.ID == user_id);
+            U = _con.Users.Include(p => p.userClass).FirstOrDefault(st => st.ID == user_id);
 
-            if (_con.StocksByClass.FirstOrDefault(s => s._class == U.userClass).products.FirstOrDefault(p => p == X) != null) { X.Stock(_con.StocksByClass.FirstOrDefault(s => s._class == U.userClass).Value); }
+            if (_con.StocksByClass.FirstOrDefault(s => s._class == U.userClass).products.FirstOrDefault(p => p == X) != null)
+            {
+                X.Stock(_con.StocksByClass.FirstOrDefault(s => s._class == U.userClass).Value);
+            }
 
             /*
             for (int i =0; i< _con.Stocks.Count(); i++)

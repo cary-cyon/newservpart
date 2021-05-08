@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using servPart.Models;
+//using servPart.Models;
 using servPart.Storage;
 using servPart.Storage.Entity;
 using System;
@@ -20,7 +20,7 @@ namespace servPart.Managers.StockManager
         }
         public Stock getbyID(int id)
         {
-            return _con.Stocks.FirstOrDefault(S => S.ID == id);
+            return _con.Stocks.Where(S => S.ID == id).First();
         }
     }
 }

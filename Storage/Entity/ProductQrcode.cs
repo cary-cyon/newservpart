@@ -1,4 +1,4 @@
-﻿using servPart.Models;
+﻿//using servPart.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -19,10 +19,10 @@ namespace servPart.Storage.Entity
 
         public double Price { set; get; }
 
-        public ProductQrGetRes GetRes()
-        {
-            return new ProductQrGetRes(Name, Price, Qrcode);
-        }
+        //public ProductQrGetRes GetRes()
+        //{
+        //    return new ProductQrGetRes(Name, Price, Qrcode);
+        //}
 
        
     }

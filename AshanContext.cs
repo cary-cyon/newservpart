@@ -25,8 +25,7 @@ namespace servPart
         public DbSet<StockOfType> StocksOfType { get; set; }
         public DbSet<Stock1_1> Stocks1_1 { get; set; }
         public DbSet<Image> Images { get; set; }
-
-       public List<StockByClass> StocksByClass { get; set; }
+        public DbSet<StockByClass> StocksByClass { get; set; }
 
 }
 }
