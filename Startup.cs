@@ -9,6 +9,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Microsoft.OpenApi.Models;
+using servPart.Managers.ImageManager;
 using servPart.Managers.ProductManager;
 using servPart.Managers.StockManager;
 using servPart.Managers.UserManager;
@@ -43,6 +44,7 @@ namespace servPart
             services.AddScoped<Stock1_1Manager>();
             services.AddScoped<StockOfTypeManager>();
             services.AddScoped<TypeManager>();
+            services.AddScoped<ImageManager>();
            
 
             services.AddDbContext<AshanContext>(optioins => optioins.UseSqlServer(Secret.log) );

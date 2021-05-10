@@ -30,6 +30,7 @@
 
   <ItemGroup>
     <Folder Include="Models\" />
+    <Folder Include="Storage\Images\" />
   </ItemGroup>
 
 </Project>

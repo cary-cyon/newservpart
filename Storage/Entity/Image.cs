@@ -13,5 +13,6 @@ namespace servPart.Storage.Entity
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ID{set;get;}
         public byte[] Picture { set; get; }
+        public string addres { get; set; }
      }
 }

@@ -59,3 +59,6 @@ C:\Users\Vlad\source\repos\serv_2\obj\Release\net5.0\servPart.dll
 C:\Users\Vlad\source\repos\serv_2\obj\Release\net5.0\ref\servPart.dll
 C:\Users\Vlad\source\repos\serv_2\obj\Release\net5.0\servPart.pdb
 C:\Users\Vlad\source\repos\serv_2\obj\Release\net5.0\servPart.genruntimeconfig.cache
+C:\Users\Vlad\source\repos\serv_2\bin\Release\net5.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\Vlad\source\repos\serv_2\bin\Release\net5.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\Vlad\source\repos\serv_2\bin\Release\net5.0\Newtonsoft.Json.Bson.dll

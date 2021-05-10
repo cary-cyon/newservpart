@@ -13,6 +13,7 @@ namespace servPart.Storage.Entity
         public Image Image { set; get; }
 
         public int count { set; get; }
+        public List<History> Histories { get; set; }
 
         public ProductQrcodewithType Stock (double value)
         {

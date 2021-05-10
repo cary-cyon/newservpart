@@ -4,6 +4,8 @@ C:\Users\Vlad\source\repos\serv_2\obj\Release\net5.0\PubTmp\Out\appsettings.json
 C:\Users\Vlad\source\repos\serv_2\obj\Release\net5.0\PubTmp\Out\servPart.dll
 C:\Users\Vlad\source\repos\serv_2\obj\Release\net5.0\PubTmp\Out\servPart.runtimeconfig.json
 C:\Users\Vlad\source\repos\serv_2\obj\Release\net5.0\PubTmp\Out\servPart.pdb
+C:\Users\Vlad\source\repos\serv_2\obj\Release\net5.0\PubTmp\Out\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\Vlad\source\repos\serv_2\obj\Release\net5.0\PubTmp\Out\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 C:\Users\Vlad\source\repos\serv_2\obj\Release\net5.0\PubTmp\Out\Microsoft.Data.SqlClient.dll
 C:\Users\Vlad\source\repos\serv_2\obj\Release\net5.0\PubTmp\Out\Microsoft.EntityFrameworkCore.dll
 C:\Users\Vlad\source\repos\serv_2\obj\Release\net5.0\PubTmp\Out\Microsoft.EntityFrameworkCore.Abstractions.dll
@@ -18,6 +20,7 @@ C:\Users\Vlad\source\repos\serv_2\obj\Release\net5.0\PubTmp\Out\Microsoft.Identi
 C:\Users\Vlad\source\repos\serv_2\obj\Release\net5.0\PubTmp\Out\Microsoft.IdentityModel.Tokens.dll
 C:\Users\Vlad\source\repos\serv_2\obj\Release\net5.0\PubTmp\Out\Microsoft.OpenApi.dll
 C:\Users\Vlad\source\repos\serv_2\obj\Release\net5.0\PubTmp\Out\Newtonsoft.Json.dll
+C:\Users\Vlad\source\repos\serv_2\obj\Release\net5.0\PubTmp\Out\Newtonsoft.Json.Bson.dll
 C:\Users\Vlad\source\repos\serv_2\obj\Release\net5.0\PubTmp\Out\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\Vlad\source\repos\serv_2\obj\Release\net5.0\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\Vlad\source\repos\serv_2\obj\Release\net5.0\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerUI.dll

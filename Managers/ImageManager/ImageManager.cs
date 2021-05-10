@@ -1,6 +1,7 @@
 ﻿using servPart.Storage.Entity;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -15,7 +16,13 @@ namespace servPart.Managers.ImageManager
         }
         public Image GetByID(int id)
         {
-            return _con.Images.FirstOrDefault(s => s.ID == id);
+            Image res = new Image();
+            res = _con.Images.FirstOrDefault(s => s.ID == id);
+            if (res != null)
+            {
+                res.Picture = File.ReadAllBytes("Storage/Images/" + res.addres);
+            }
+            return res; 
         }
     }
 }
