@@ -62,3 +62,4 @@ C:\Users\Vlad\source\repos\serv_2\obj\Release\net5.0\servPart.genruntimeconfig.c
 C:\Users\Vlad\source\repos\serv_2\bin\Release\net5.0\Microsoft.AspNetCore.JsonPatch.dll
 C:\Users\Vlad\source\repos\serv_2\bin\Release\net5.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 C:\Users\Vlad\source\repos\serv_2\bin\Release\net5.0\Newtonsoft.Json.Bson.dll
+C:\Users\Vlad\source\repos\serv_2\bin\Release\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

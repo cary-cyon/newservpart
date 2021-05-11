@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using servPart.Managers.ProductManager;
 using servPart.Storage.Entity;
@@ -23,9 +24,10 @@ namespace servPart.Controllers
 
 
         [HttpGet]
-        public User GetUser(int id)
+        [Authorize(AuthenticationSchemes = "Bearer")]
+        public User GetUser()
         {
-            return _man.InfoUser(id);
+            return _man.GetIdentity(User.Identity.Name);
         }
         [HttpPost]
         public void AddUser(User user)
@@ -37,7 +39,7 @@ namespace servPart.Controllers
         //{
         //    return _man.GetUsers();
         //}
-      
-        
+
+
     }
 }

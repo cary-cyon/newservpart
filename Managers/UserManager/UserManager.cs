@@ -27,6 +27,10 @@ namespace servPart.Managers.ProductManager
         {
             return _con.Users.ToList();
         }
+        public User GetIdentity(string Name)
+        {
+            return _con.Users.FirstOrDefault(s => s.name == Name);
+        }
         public User ChangeClass(int user_id, int class_id)
         {
             User T = new User();
