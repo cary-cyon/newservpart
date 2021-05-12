@@ -22,5 +22,10 @@ namespace servPart.Controllers
         {
             return _man.GetByID(id);
         }
+        [HttpPost]
+        public void UpImage(int id)
+        {
+            _man.UpdateImage(id);
+        }
     }
 }

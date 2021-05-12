@@ -1,4 +1,5 @@
-﻿using servPart.Storage.Entity;
+﻿using Microsoft.EntityFrameworkCore;
+using servPart.Storage.Entity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,7 +16,7 @@ namespace servPart.Managers.ProductManager
         }
         public TypeProduct getbyID(int id)
         {
-            return _con.Types.FirstOrDefault(S => S.ID == id);
+            return _con.Types.Include(p => p.Products).FirstOrDefault(S => S.ID == id);
         }
     }
 }

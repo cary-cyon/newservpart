@@ -22,13 +22,23 @@ namespace servPart.Managers.ProductManager
         {
 
             ProductQrcodewithType X = new ProductQrcodewithType();
-           
-            X = _con.ProductQrcodes.FirstOrDefault(st => st.id == id);
 
-            if (_con.Stocks.FirstOrDefault(s => s.product == X) != null) { X.Stock(_con.Stocks.FirstOrDefault(s => s.product == X).Value); }
+            X = _con.ProductQrcodes.Include(p => p.Types).Include(p => p.Image).FirstOrDefault(st => st.id == id);
+            if (X != null)
+            {
+                if (_con.Stocks.FirstOrDefault(s => s.product == X) != null)
+                {
+                    X.Stock(_con.Stocks.FirstOrDefault(s => s.product == X).Value);
+                }
 
-            for (int i = 0; i < X.Types.Count(); i++) {
-                if (_con.StocksOfType.FirstOrDefault(s => s.Type == X.Types[i]) != null) { X.Stock(_con.StocksOfType.FirstOrDefault(s => s.Type == X.Types[i]).Value); }
+                for (int i = 0; i < X.Types.Count(); i++)
+                {
+                    var test = _con.StocksOfType.FirstOrDefault(s => s.Type == X.Types[i]);
+                    if (test != null)
+                    {
+                        X.Stock(test.Value);
+                    }
+                }
             }
 
             User U = new User();

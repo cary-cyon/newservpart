@@ -16,13 +16,15 @@ namespace servPart.Managers.ImageManager
         }
         public Image GetByID(int id)
         {
-            Image res = new Image();
-            res = _con.Images.FirstOrDefault(s => s.ID == id);
-            if (res != null)
-            {
-                res.Picture = File.ReadAllBytes("Storage/Images/" + res.addres);
-            }
-            return res; 
+            return _con.Images.FirstOrDefault(s => s.ID == id);
         }
+        public void UpdateImage(int id)
+        {
+            var pic = _con.Images.FirstOrDefault(s => s.ID == id);
+            pic.Picture = File.ReadAllBytes("Storage/Images/" + id.ToString() + ".jpg");
+            _con.Images.Update(pic);
+            _con.SaveChanges();
+        }
+
     }
 }

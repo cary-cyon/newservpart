@@ -17,12 +17,12 @@ namespace servPart.Managers.AuthenticationManager
         }
         public ClaimsIdentity GetIdentity(string username, string password)
         {
-            User person = _con.Users.FirstOrDefault(x => x.name == username && x.password == password);
+            User person = _con.Users.FirstOrDefault(x => x.e_mail == username && x.password == password);
             if (person != null)
             {
                 var claims = new List<Claim>
                 {
-                    new Claim(ClaimsIdentity.DefaultNameClaimType, person.name),
+                    new Claim(ClaimsIdentity.DefaultNameClaimType, person.e_mail),
                     //new Claim(ClaimsIdentity.DefaultRoleClaimType, person.Role)
                 };
                 ClaimsIdentity claimsIdentity =

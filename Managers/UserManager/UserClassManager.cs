@@ -1,4 +1,5 @@
-﻿using servPart.Storage.Entity;
+﻿using Microsoft.EntityFrameworkCore;
+using servPart.Storage.Entity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -34,7 +35,7 @@ namespace servPart.Managers.UserManager
         }
         public List<UserClass> GetUserClasses()
         {
-            return _con.UserClasses.ToList();
+            return _con.UserClasses.Include(p => p.Users).ToList();
         }
 
 

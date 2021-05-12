@@ -18,6 +18,8 @@ namespace servPart.Storage.Entity
         public double sum_buy { set; get; }
         public int num_buy { set; get; }
         public string password { set; get; }
+        public string e_mail { set; get; }
+        public string tel { get; set; }
         public List<History> Histories { get; set; }
         public UserType type { set; get; }
         public UserClass userClass { set; get; }
