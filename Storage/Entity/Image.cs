@@ -11,8 +11,11 @@ namespace servPart.Storage.Entity
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int ID{set;get;}
+        public int ID { set; get; }
         public byte[] Picture { set; get; }
         public string addres { get; set; }
+        //[ForeignKey("ProductQrcodewithType")]
+        //public int ProductQrcodewithTypeId { get; set; }
+        //public ProductQrcodewithType product { get; set; }
      }
 }

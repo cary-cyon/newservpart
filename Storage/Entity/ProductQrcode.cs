@@ -15,6 +15,7 @@ namespace servPart.Storage.Entity
         [Key]
         [MaxLength(13)]
         public string Qrcode { set; get; }
+
         public string Name { set; get; }
 
         public double Price { set; get; }

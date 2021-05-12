@@ -5,12 +5,13 @@ using System.Threading.Tasks;
 
 namespace servPart.Storage.Entity
 {
-    public class ProductQrcodewithType: ProductQrcode
+    public class ProductQrcodewithType : ProductQrcode
     {
         public List<TypeProduct> Types { set; get; } = new List<TypeProduct>();
         public Producter Producter { set; get; }
 
         public Image Image { set; get; }
+        public byte[] Picture { set; get; }
 
         public int count { set; get; }
         public List<History> Histories { get; set; }

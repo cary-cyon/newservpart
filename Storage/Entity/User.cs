@@ -27,8 +27,7 @@ namespace servPart.Storage.Entity
         /*
         public static bool operator ==(User other, User it )
         {
-            if (it.ID == other.ID)
-            {
+            if (it.ID == other.ID)            {
                 return true;
             }
             else

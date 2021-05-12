@@ -23,7 +23,8 @@ namespace servPart.Managers.ProductManager
 
             ProductQrcodewithType X = new ProductQrcodewithType();
 
-            X = _con.ProductQrcodes.Include(p => p.Types).Include(p => p.Image).FirstOrDefault(st => st.id == id);
+            X = _con.ProductQrcodes.Include(p => p.Image).Include(p => p.Types).FirstOrDefault(st => st.id == id);
+            _con.ProductQrcodes.Where(p => p.Image == X.Image).Load();
             if (X != null)
             {
                 if (_con.Stocks.FirstOrDefault(s => s.product == X) != null)
@@ -115,7 +116,7 @@ namespace servPart.Managers.ProductManager
                 }
             }
            */
-
+            
             return X;
 
         }

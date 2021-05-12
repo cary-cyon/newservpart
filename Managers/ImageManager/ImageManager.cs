@@ -18,11 +18,11 @@ namespace servPart.Managers.ImageManager
         {
             return _con.Images.FirstOrDefault(s => s.ID == id);
         }
-        public void UpdateImage(int id)
+        public void UpdateImage(string Qr,int id)
         {
-            var pic = _con.Images.FirstOrDefault(s => s.ID == id);
+            var pic = _con.ProductQrcodes.FirstOrDefault(s => s.Qrcode == Qr);
             pic.Picture = File.ReadAllBytes("Storage/Images/" + id.ToString() + ".jpg");
-            _con.Images.Update(pic);
+            //_con.ProductQrcodes.Update();
             _con.SaveChanges();
         }
 

@@ -23,9 +23,9 @@ namespace servPart.Controllers
             return _man.GetByID(id);
         }
         [HttpPost]
-        public void UpImage(int id)
+        public void UpImage(string Qr,int id)
         {
-            _man.UpdateImage(id);
+            _man.UpdateImage(Qr,id);
         }
     }
 }
