@@ -1,4 +1,5 @@
-﻿using servPart.Storage.Entity;
+﻿using Microsoft.EntityFrameworkCore;
+using servPart.Storage.Entity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,10 +17,15 @@ namespace servPart.Managers.ProductManager
 
         public User InfoUser(int id)
         {
-            return _con.Users.FirstOrDefault(Us => Us.ID == id);
+            User res =  _con.Users.Include(u => u.userClass).FirstOrDefault(Us => Us.ID == id);
+            _con.UserClasses.Where(sb => sb.Users.Contains(res)).Load();
+            return res;
         }
         public void AddNewUser(User user)
         {
+            user.num_buy = 0;
+            user.sum_buy = 0;
+            user.userClass = _con.UserClasses.FirstOrDefault(s => s.start_sum == 0);
             _con.Users.Add(user);
             _con.SaveChanges();
         }
