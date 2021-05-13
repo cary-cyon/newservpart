@@ -25,9 +25,9 @@ namespace servPart.Controllers
         }
 
         [HttpPost]
-        public void Add(History his)
+        public void Add(History his,int id)
         {
-            _man.AddHistory(his);
+            _man.AddHistory(his,id);
         }
     }
 }

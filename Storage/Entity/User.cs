@@ -13,7 +13,6 @@ namespace servPart.Storage.Entity
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ID { set; get; }
         public string name { set; get; }
-        [MaxLength(8)]
         public string br_day { set; get; }
         public double sum_buy { set; get; }
         public int num_buy { set; get; }

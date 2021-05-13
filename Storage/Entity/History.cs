@@ -16,5 +16,7 @@ namespace servPart.Storage.Entity
         public string TimeDate { get; set; }
         public List<ProductQrcodewithType> Products { get; set; }
         public string Time { get; set; }
+        public double Sum { get; set; }
+
     }
 }
